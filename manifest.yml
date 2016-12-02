@@ -1,0 +1,17 @@
+---
+path: target/cf-springboot-example-0.1.0.jar
+memory: 1GB
+disk: 1GB
+instances: 1
+buildpack: java_buildpack_offline
+
+applications:
+  - name: cf-springboot-example
+    instances: 1
+    host: cf-springboot01
+
+env:
+  JBP_CONFIG_JAVA_MAIN: '{arguments: "-foo=bar -f file.txt"}'
+  JAVA_OPTS: '-Djava.security.egd=file:///dev/urandom -verbose:gc -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps'
+  JBP_CONFIG_OPEN_JDK_JRE: '[memory_calculator: {stack_threads: 300, memory_sizes: {metaspace: 160m.., stack: 228k..}, memory_heuristics: {heap: 45, native: 40, stack: 10}}]'
+  JBP_CONFIG_ORACLE_JRE: '[memory_calculator: {stack_threads: 300, memory_sizes: {metaspace: 160m.., stack: 228k..}, memory_heuristics: {heap: 45, native: 40, stack: 10}}]'
