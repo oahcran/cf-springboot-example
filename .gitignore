@@ -33,4 +33,5 @@ dependency-reduced-pom.xml
 .classpath
 .project
 .settings/
+.java-version
 
