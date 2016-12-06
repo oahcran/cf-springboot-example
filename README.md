@@ -6,3 +6,6 @@ Spring Boot Example on Cloud Foundry
 https://spring.io/guides/gs/scheduling-tasks/
 
 https://spring.io/guides/gs/rest-service/
+
+https://github.com/dmikusa-pivotal/cf-debug-tools
+
